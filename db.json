@@ -1,0 +1,152 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "nomeCivil": "João Silva",
+      "email": "joao@example.com",
+      "senha": "senha123",
+      "dataNascimento": "1990-01-01",
+      "tipoUsuario": "Candidato"
+    },
+    {
+      "id": 2,
+      "nomeCivil": "Maria Souza",
+      "email": "maria@example.com",
+      "senha": "senha456",
+      "dataNascimento": "1995-05-15",
+      "tipoUsuario": "Recrutador"
+    },
+    {
+      "id": 3,
+      "nomeCivil": "erick luan serpe",
+      "email": "serpetabordaerickluan@gmail.com",
+      "senha": "123",
+      "dataNascimento": "2004-11-25",
+      "tipoUsuario": "Candidato"
+    },
+    {
+      "id": 4,
+      "nomeCivil": "erick luan serpe",
+      "email": "serpetabordaerickluan@gmail.com",
+      "senha": "123",
+      "dataNascimento": "4444-05-24",
+      "tipoUsuario": "Candidato"
+    },
+    {
+      "email": null,
+      "senha": null,
+      "id": 5
+    },
+    {
+      "email": null,
+      "senha": null,
+      "id": 6
+    },
+    {
+      "email": null,
+      "senha": null,
+      "id": 7
+    },
+    {
+      "email": null,
+      "senha": null,
+      "id": 8
+    },
+    {
+      "email": null,
+      "senha": null,
+      "id": 9
+    },
+    {
+      "email": null,
+      "senha": null,
+      "id": 10
+    }
+  ],
+  "resumes": [
+    {
+      "id": 1,
+      "userId": 1,
+      "experienciaProfissional": "Desenvolvedor Web na Empresa X",
+      "formacaoAcademica": "Bacharel em Ciência da Computação",
+      "habilidades": [
+        "JavaScript",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "experienciaProfissional": "Recrutadora na Empresa Y",
+      "formacaoAcademica": "Psicologia",
+      "habilidades": [
+        "Recrutamento",
+        "Entrevistas",
+        "Avaliação de Candidatos"
+      ]
+    },
+    {
+      "nomeCivil": "teste",
+      "email": "teste@gmail.com",
+      "senha": "123",
+      "dataNascimento": "2004-11-25",
+      "tipoUsuario": "Candidato",
+      "id": 3
+    },
+    {
+      "id": 4
+    }
+  ],
+  "vagas": [
+    {
+      "id": 1,
+      "title": "Desenvolvedor Frontend",
+      "description": "Vaga para desenvolvedor frontend com experiência em React.",
+      "location": "São Paulo, SP",
+      "type": "full-time"
+    },
+    {
+      "id": 2,
+      "title": "Analista de Dados",
+      "description": "Vaga para analista de dados com experiência em SQL e Python.",
+      "location": "Rio de Janeiro, RJ",
+      "type": "contract"
+    },
+    {
+      "id": 3,
+      "title": "Gerente de Projetos",
+      "description": "Vaga para gerente de projetos com experiência em metodologias ágeis.",
+      "location": "Belo Horizonte, MG",
+      "type": "full-time"
+    },
+    {
+      "id": 4,
+      "title": "Desenvolvedor Backend",
+      "description": "Vaga para desenvolvedor backend com experiência em Node.js.",
+      "location": "Porto Alegre, RS",
+      "type": "part-time"
+    },
+    {
+      "id": 5,
+      "title": "Designer UX/UI",
+      "description": "Vaga para designer UX/UI com experiência em Figma.",
+      "location": "Curitiba, PR",
+      "type": "full-time"
+    },
+    {
+      "id": 6,
+      "title": "Analista de Marketing",
+      "description": "Vaga para analista de marketing com experiência em SEO.",
+      "location": "Florianópolis, SC",
+      "type": "contract"
+    },
+    {
+      "id": 7,
+      "title": "Engenheiro de Software",
+      "description": "Vaga para engenheiro de software com experiência em C++.",
+      "location": "Brasília, DF",
+      "type": "full-time"
+    }
+  ]
+}

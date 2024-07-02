@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConnectCareer - Vagas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/website/styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/linkedin_banner_image_1 1.png" alt="ConnectCareer Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="d-flex align-items-center ms-auto" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="/website/vagas.html">
+                            <i class="bi bi-globe2 me-1"></i><span>Vagas</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="/website/perfil.html">
+                            <i class="bi bi-person me-1"></i><span>Perfil</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link d-flex flex-column align-items-center" href="/website/pages/curriculo.html">
+                            <i class="bi bi-card-list me-1"></i><span>Currículo</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Oportunidades de Emprego</h1>
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <input type="text" class="form-control" id="searchTitle" placeholder="Buscar vagas...">
+            </div>
+            <div class="col-md-3">
+                <select class="form-select" id="searchLocation">
+                    <option value="">Todas as Localizações</option>
+                    <option value="São Paulo, SP">São Paulo, SP</option>
+                    <option value="Rio de Janeiro, RJ">Rio de Janeiro, RJ</option>
+                    <option value="Belo Horizonte, MG">Belo Horizonte, MG</option>
+                    <option value="Porto Alegre, RS">Porto Alegre, RS</option>
+                    <option value="Curitiba, PR">Curitiba, PR</option>
+                    <option value="Florianópolis, SC">Florianópolis, SC</option>
+                    <option value="Brasília, DF">Brasília, DF</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select class="form-select" id="searchType">
+                    <option value="">Todos os Tipos</option>
+                    <option value="full-time">Full-time</option>
+                    <option value="part-time">Part-time</option>
+                    <option value="contract">Contract</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-secondary" id="resetFilters">Resetar Filtros</button>
+            </div>
+        </div>
+
+        <div id="vagas-list" class="row"></div>
+        <nav>
+            <ul class="pagination justify-content-center" id="pagination"></ul>
+        </nav>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center mt-5 py-3 footer-custom">
+        <p>&copy; 2024 ConnectCareer. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

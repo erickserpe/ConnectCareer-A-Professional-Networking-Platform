@@ -1,0 +1,188 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.navbar-custom {
+    background-color: #ffffff;
+    border: none;
+    box-shadow: none;
+}
+
+.navbar-custom .navbar-brand img {
+    height: 50px;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #000;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar-custom .navbar-nav .nav-link i {
+    margin-right: 5px;
+}
+
+.navbar-custom .navbar-toggler {
+    border: none;
+}
+
+.navbar-custom .navbar-collapse {
+    justify-content: flex-end;
+}
+
+.footer-custom {
+    background-color: #ffffff;
+    border-top: 1px solid #eaeaea;
+    color: #6c757d;
+}
+
+.footer-custom p {
+    margin: 0;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.pagination .page-item .page-link {
+    color: #007bff;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar-custom {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e3e4e6;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.footer-custom {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e3e4e6;
+}
+
+.vaga-card {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vaga-header {
+    display: flex;
+    align-items: center;
+}
+
+.company-logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.vaga-info {
+    flex-grow: 1;
+}
+
+.vaga-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.vaga-company, .vaga-location {
+    margin: 5px 0;
+    color: #666;
+}
+
+.vaga-footer {
+    text-align: right;
+}
+
+.vaga-type, .vaga-postedAt {
+    margin: 0;
+    color: #999;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.page-item {
+    margin: 0 5px;
+}
+
+.page-link {
+    text-decoration: none;
+    padding: 10px 15px;
+    color: #007bff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.page-item.active .page-link {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+
+.navbar-custom .navbar-brand img {
+    height: 40px;
+}
+
+.footer-custom {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
+
+.footer-custom p {
+    margin: 0;
+}
+
+/* Estilo para o formulário de perfil */
+#perfilForm {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#perfilForm .form-label {
+    font-weight: bold;
+}
+
+#perfilForm .form-control {
+    margin-bottom: 1rem;
+}
+
+#perfilForm button {
+    width: 100%;
+}
+
