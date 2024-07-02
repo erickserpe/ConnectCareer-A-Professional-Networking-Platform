@@ -1,47 +1,28 @@
-// Função para enviar dados do formulário de currículo
-async function handleCurriculoSubmit(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
 
-    const data = {};
-    formData.forEach((value, key) => {
-        data[key] = value;
-    });
+// função para cadastro
 
-    try {
-        const response = await fetch('http://localhost:3000/resumes', {
-            method: 'POST',
-            body: JSON.stringify(data),
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8'
-            }
-        });
-
-        if (!response.ok) {
-            throw new Error('Erro ao enviar os dados do currículo.');
-        }
-
-        const result = await response.json();
-        console.log('Currículo enviado com sucesso:', result);
-        alert('Currículo enviado com sucesso!');
-    } catch (error) {
-        console.error(error);
-        alert('Ocorreu um erro ao enviar o currículo.');
-    }
-}
-
-// Função para processar login
-async function handleLoginSubmit(event) {
+async function handleCadastroSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
 
     const email = formData.get('email');
-    const senha = formData.get('senha'); // Nome do campo mudado para "senha"
+    const senha = formData.get('senha'); 
+    const nomeCivil = formData.get('nomeCivil');
+    const dataNascimento = formData.get('dataNascimento');
+    const cep = formData.get('cep');
+    const logradouro = formData.get('logradouro');
+    const numero = formData.get('numero');
+    const complemento = formData.get('complemento');
+    const bairro = formData.get('bairro');
+    const cidade = formData.get('cidade');
+    const estado = formData.get('estado');
+    const tipoUsuario = formData.get('tipoUsuario');
+    
 
     try {
         const response = await fetch('http://localhost:3000/users', {
             method: 'POST',
-            body: JSON.stringify({ email, senha }), // Enviando email e senha
+            body: JSON.stringify({ email, senha, nomeCivil, dataNascimento, cep, logradouro, numero, complemento, bairro, cidade, estado, tipoUsuario }), 
             headers: {
                 'Content-type': 'application/json; charset=UTF-8'
             }
@@ -53,24 +34,57 @@ async function handleLoginSubmit(event) {
 
         const user = await response.json();
         localStorage.setItem('user', JSON.stringify(user));
-        alert('Login bem-sucedido!');
-        window.location.href = 'http://127.0.0.1:5500/website/vagas.html';
+        alert('Cadastro bem-sucedido!');
+        window.location.href = 'http://127.0.0.1:5500/website/vagas.html'; // Redireciona para página de vagas
     } catch (error) {
         console.error(error);
-        alert('Email ou senha incorretos.');
+        alert('Erro');
     }
 }
 
+
 // Adicionar event listeners após o carregamento do DOM
 document.addEventListener('DOMContentLoaded', () => {
-    const curriculoForm = document.getElementById('cadastroForm');
     const loginForm = document.getElementById('loginForm');
+    const cadastroForm = document.getElementById('cadastroForm')  
 
-    if (curriculoForm) {
-        curriculoForm.addEventListener('submit', handleCurriculoSubmit);
+    if (cadastroForm) {
+        cadastroForm.addEventListener('submit',handleCadastroSubmit);
     }
+})
+document.addEventListener('DOMContentLoaded', function() {
+    const cepInput = document.getElementById('cep');
+    cepInput.addEventListener('blur', function() {
+        const cep = cepInput.value.replace(/\D/g, ''); // Remove caracteres não numéricos
 
-    if (loginForm) {
-        loginForm.addEventListener('submit', handleLoginSubmit);
-    }
+        if (cep.length !== 8) {
+            alert('CEP deve ter exatamente 8 dígitos numéricos');
+            return; // CEP deve ter exatamente 8 dígitos numéricos
+        }
+
+        const url = `https://viacep.com.br/ws/${cep}/json/`;
+
+        fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Erro ao buscar CEP');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.erro) {
+                    alert('CEP não encontrado');
+                } else {
+                    console.log(data); // Adicionado para depuração
+                    document.getElementById('logradouro').value = data.logradouro;
+                    document.getElementById('bairro').value = data.bairro;
+                    document.getElementById('cidade').value = data.localidade;
+                    document.getElementById('estado').value = data.uf;
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao buscar CEP:', error);
+                alert('Erro ao buscar CEP');
+            });
+    });
 });
