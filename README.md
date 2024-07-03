@@ -3,7 +3,9 @@ PROJETO TSI DESENVOLVIMENTO WEB2
 PLATAFORMA DE RECRUTAMENTO ONLINE - CONNECTCAREER
 INSPIRAÇÃO LINKEDIN 
 
+## Git Pages
 
+https://erickserpe.github.io/ConnectCareer-A-Professional-Networking-Platform/website/login.html
 
 ## Protótipo
 
